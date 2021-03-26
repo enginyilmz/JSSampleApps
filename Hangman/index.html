@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hangman</title>
+</head>
+
+<body>
+    <h1>Hangman</h1>
+    <p>Enter a letter to find the hidden word.</p>
+    <div class="container">
+        <svg height="250" width="250" class="graphic">
+            <!-- Tree -->
+            <line x1="50" y1="20" x2="130" y2="20"></line>
+            <line x1="130" y1="20" x2="130" y2="50"></line>
+            <line x1="50" y1="20" x2="50" y2="250"></line>
+            <line x1="10" y1="250" x2="90" y2="250"></line>
+
+            <!-- Head -->
+            <circle cx="130" cy="70" r="20" class="item"></circle>
+
+            <!-- Body -->
+            <line x1="130" y1="90" x2="130" y2="170" class="item"></line>
+
+            <!-- Arms -->
+            <line x1="130" y1="120" x2="100" y2="140" class="item"></line>
+            <line x1="130" y1="120" x2="160" y2="140" class="item"></line>
+
+            <!-- Legs -->
+            <line x1="130" y1="170" x2="100" y2="210" class="item"></line>
+            <line x1="130" y1="170" x2="160" y2="210" class="item"></line>
+        </svg>
+
+        <div id="wrong-letters">
+        </div>
+        <div id="word">
+            <!--This area will be dynamically created-->
+            <!-- <div class="letter">c</div>-->
+            <!-- <div class="letter">s</div>-->
+            <!-- <div class="letter">s</div> -->
+        </div>
+    </div>
+    <div id="popup-container">
+        <div class="popup">
+            <h2 id="message">You win :)</h2>
+            <button id="play-again">Play again</button>
+        </div>
+    </div>
+
+    <div id="message-box" class="">
+        <p>You have already tried this letter!</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
