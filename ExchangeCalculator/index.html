@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Exchange Calculator</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-danger">
+        <div class="container justify-content-center">
+            <a href="" class="navbar-brand">Exchange Calculator</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form id="form" class="row my-3 g-3 justify-content-center needs-validation" novalidate>
+            <div class="col-sm-6">
+                <div class="mb-3">
+                    <select class="form-select" id="currency_one" required>
+                        <option selected disabled value="">Select Currency</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid base currency.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" id="currency_two" required>
+                        <option selected disabled value="">Select Currency</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid target currency.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <input type="number" id="amount" class="form-control" placeholder="Amount" required>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-block" id="btn_calculate" type="submit">Calculate</button>
+                </div>
+                <div class="text-danger text-center mt-3" id="result">
+
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--Latest Currencies-->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div id="latestCurrencies" class="fs-4 text text-center bg-light text-muted mb-3"><i id="update"
+                        role="button" class="bi bi-arrow-repeat"></i> Latest Currencies</div>
+
+                <ul class="list-group">
+                    <li class="list-group-item d-flex">
+                        <div>One Dollar</div>
+                        <div><i class="bi bi-currency-dollar"></i></div>
+                        <div class="ms-auto"><span id="dollar" class="badge bg-secondary"></span></div>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div>One Euro</div>
+                        <div><i class="bi bi-currency-euro"></i></div>
+                        <div class="ms-auto"><span id="euro" class="badge bg-secondary"></span></div>
+                    </li>
+                    <li class="list-group-item d-flex">
+                        <div>One Pound</div>
+                        <div><i class="bi bi-currency-pound"></i></div>
+                        <div class="ms-auto"><span id="pound" class="badge bg-secondary"></span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Using Tools-->
+    <div class="container mt-3">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div class="fs-4 text text-center bg-light text-muted mb-3">Using Tools</div>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex align-items-center">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Javascript</div>
+                        </div>
+                        <i class="bi bi-code-slash text-primary" style="font-size: 32px;"></i>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center ">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Bootstrap 5</div>
+                        </div>
+                        <i class="bi bi-bootstrap text-primary" style="font-size: 32px;"></i>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">API</div>
+                            exchangeratesapi.io
+                        </div>
+                        <i class="bi bi-gear text-primary" style="font-size: 32px;"></i>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://getbootstrap.com/docs/5.0/assets/js/validate-forms.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
